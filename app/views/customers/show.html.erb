@@ -1,0 +1,16 @@
+<div>
+  <h3>Data of Customer = <%=@customer.id%></h3>
+  <hr>
+  <%= link_to "Edit Customer", edit_customer_path %>
+  <ul class="list-group">
+    <li class="list-group-item"> Name : <%=@customer.first_nm%> <%=@customer.last_nm%></li>
+    <li class="list-group-item">Title : <%=@customer.title%></li>
+    <li class="list-group-item">Email : <%=@customer.email%></li>
+    <li class="list-group-item">No. of Visit : <%=@customer.visit%></li>
+    <li class="list-group-item">Order Count : <%=@customer.order_count%></li>
+    <li class="list-group-item">Lock Version : <%=@customer.lock_version%></li>
+  <ul>
+</div>
+
+
+

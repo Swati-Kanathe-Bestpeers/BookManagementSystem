@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_nm: MyString
+  last_nm: MyString
+  title: MyString
+  email: MyString
+  visit: 1
+  order_count: 1
+  lock_version: 1
+
+two:
+  first_nm: MyString
+  last_nm: MyString
+  title: MyString
+  email: MyString
+  visit: 1
+  order_count: 1
+  lock_version: 1

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Existing Orders Detail</h1>
+    <hr>
+    <h4><span class="label label-primary">This is the list of existing orders</span></h4>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Submitted Date</th>
+        <th>Status</th>
+        <th>Subtotal</th>
+        <th>Shipping</th>
+        <th>Tax </th>
+        <th>Total</th>
+        <th>Customer Id</th>
+        <th>Show Order Details</th>
+        <th>Show Customer Details</th>
+      </tr>
+    </thead>
+    <tbody>  
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%=order.id%></td>
+        <td><%=order.date_submitted%></td>
+        <td><%=order.status%></td>
+        <td><%=order.subtotal%></td>
+        <td><%=order.shipping%></td>
+        <td><%=order.tax%></td>
+        <td><%=order.total%></td>
+        <td><%=order.customer_id%></td>
+        <td><%= link_to "Show Order",  order_path(order.id) %></td>
+        <td><%= link_to "Customer Details", customer_path(order.customer_id) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

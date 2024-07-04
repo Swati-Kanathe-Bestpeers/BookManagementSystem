@@ -1,0 +1,14 @@
+<div>
+  <h3>Details of Author :- <%= @author.id %> </h3>
+  <hr>
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item">Author Id : <%= @author.id %></li>
+      <li class="list-group-item">Name : <%= @author.first_name %> <%= @author.last_name %></li>
+      <li class="list-group-item">Title : <%= @author.title%></li>
+    </ul>
+  <div>
+    <strong><%= link_to "Edit Information" , edit_author_path(@author.id)%></strong>
+    <br> <br>
+    <strong><%=button_to "Delete Details", @author, method: "delete" %></strong>
+</div>

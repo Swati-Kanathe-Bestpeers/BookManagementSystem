@@ -1,0 +1,12 @@
+<h2>Edit Author  </h2>
+<div>
+  <%= form_for @author do |form| %>
+  <strong><%= form.label :first_name, "First Name" %></strong>
+  <strong><%= form.text_field :first_name %></strong>
+  <br><br>
+  <strong><%= form.label :last_name, "Last Name" %></strong>
+  <strong><%= form.text_field :last_name %></strong>
+  <br><br>
+  <%= form.submit%>
+  <% end %>
+</div>

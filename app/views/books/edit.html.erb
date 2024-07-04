@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <h3>Edit Information </h3>
+  <div class="container-fluid">
+    <%= form_for (@book) do |form| %>
+      <%= form.label :title, "Title" %>
+      <%= form.text_field :title %>
+      <br><br>
+      <%= form.label :isbn , "ISBN" %>
+      <%= form.text_field :isbn %>
+      <br><br>
+      <%= form.label :views, "View" %>
+      <%= form.text_field :views %>
+      <br><br>
+      <%= form.submit%>
+    <% end %>
+  </div>
+</div>

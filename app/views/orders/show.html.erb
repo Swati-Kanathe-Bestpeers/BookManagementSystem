@@ -1,0 +1,14 @@
+<div>
+  <h3>Customer Order Details = <%=@order.customer_id%></h3>
+  <hr>
+  <%= link_to "Edit Orders Details",  edit_order_path %>
+  <ul class="list-group"> 
+    <li class="list-group-item">Order Id : <%=@order.id%></li>
+    <li class="list-group-item">Submitted Date:  <%=@order.date_submitted%></li>
+    <li class="list-group-item">Order Status :<%=@order.status%></li>
+    <li class="list-group-item">Subtotal: <%=@order.subtotal%></li>
+    <li class="list-group-item">Shipping  : <%=@order.shipping%></li>
+    <li class="list-group-item">Tax : <%=@order.tax%></li>
+    <li class="list-group-item">Total : <%=@order.total%></li>
+  <ul>
+</div>
