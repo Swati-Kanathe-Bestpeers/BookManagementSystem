@@ -1,0 +1,24 @@
+<div class="container">
+  <div  class="card" style="width: 18rem;">
+    <div class="card-header">
+      <h3>Add New </h3>
+      <%= form_with model: (@customer) do |form| %>
+        <p><strong><%= form.label :first_nm, "First Name" %></strong></p>
+        <p><strong><%= form.text_field :first_nm %></strong></p>
+        <p><strong><%=form.label :last_nm, "Last Name" %></strong></p>
+        <p><strong><%=form.text_field :last_nm %></strong></p>
+        <p><strong><%=form.label :title, "Title" %></strong></p>
+        <p><strong><%=form.text_field :title %></strong></p>
+        <p><strong><%=form.label :email, "Email Id" %></strong></p>
+        <p><strong><%=form.email_field :email %></strong></p>
+        <p><strong><%=form.label :visit, "Visit" %></strong></p>
+        <p><strong><%=form.number_field :visit %></strong></p>
+        <p><strong><%=form.label :order_count, "Order Count" %></strong></p>
+        <p><strong><%=form.number_field :order_count %></strong></p>
+        <p><strong><%=form.label :lock_version, "Lock Version" %></strong></p>
+        <p><strong><%=form.number_field :lock_version %></strong></p>
+        <%= form.submit "Create" %>
+      <% end%>
+    </div>
+  </div>
+</div>

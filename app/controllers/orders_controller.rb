@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.find(params[:id])
+    @order = Order.new
   end
 
   def edit
@@ -16,8 +16,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.find(params[:id])
-    if @order.after_save
+    @order = Order.new
+    if @order.save
       redirect_to orders_path
     else
       render 'new'

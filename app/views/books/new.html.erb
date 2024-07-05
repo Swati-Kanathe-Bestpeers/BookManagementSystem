@@ -1,2 +1,25 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<div class="container">
+  <h1>Add New</h1>
+  <div class="container ">
+    <%= form_with model: (@book) do |form| %>
+      <strong><%= form.label :title, "Title" %></strong>
+      <strong><%= form.text_field :title %></strong>
+      <br> <br>
+      <strong><%= form.label :published_year, "Published Year" %></strong>
+      <strong><%= form.text_field :published_year %></strong><br> <br>
+      <strong><%= form.label :isbn, "ISBN" %></strong>
+      <strong><%= form.text_field :isbn %></strong><br> <br>
+      <strong><%= form.label :price, "Price" %></strong>
+      <strong><%= form.number_field :price %></strong><br> <br>
+      <strong><%= form.label :out_of_print, "Out of Print" %></strong>
+      <strong><%= form.number_field  :out_of_print %></strong><br> <br>
+      <strong><%= form.label :views, "Views" %></strong>
+      <strong><%= form.number_field :views %></strong><br> <br>
+      <strong><%= form.label :supplier_id, "Supplier Id" %></strong>
+      <strong><%= form.number_field :supplier_id %></strong><br> <br>
+      <strong><%= form.label :author_id, "Author Id" %></strong>
+      <strong><%= form.number_field :author_id %></strong><br> <br>
+      <strong><%= form.submit "Save" %></strong>
+    <% end %>
+  </div>
+</div>

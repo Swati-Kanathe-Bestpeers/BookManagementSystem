@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @review = Review.find(params[:id])
+    @review = Review.new
   end
 
   def edit
@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.find(params[:id])
+    @review = Review.new
     if @review.after_save
       redirect_to reviews_path
     else
