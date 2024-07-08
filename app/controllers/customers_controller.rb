@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   
-  http_basic_authenticate_with name: "username", password: "password"
+  # http_basic_authenticate_with name: "username", password: "password"
   protect_from_forgery with: :null_session
 
   def index
@@ -24,8 +24,8 @@ class CustomersController < ApplicationController
   
   def create
     @customer = Customer.new(customer_param)
-    if @customer.save 
-      # render json: @customer
+    if @customer.after_save 
+      redirect_to customers_path
     else
       render json: {:errors => @customer.errors.full_messages}
     end
@@ -50,7 +50,7 @@ class CustomersController < ApplicationController
   end
   private 
     def customer_param
-      params.require(:customer).permit(:first_nm, :last_nm,:title, :email,:visit,:order_count)
+      params.require(:customer).permit(:first_nm, :last_nm,:title, :email,:visit,:order_count,:lock_version)
     end
 end
   

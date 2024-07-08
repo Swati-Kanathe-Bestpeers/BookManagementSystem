@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
   resources :customers, :orders, :reviews, :books, :authors
-  root "customers#index"
+  resources :users, only: [:new, :create, :index, :show]
+  resources :sessions, only: [:new, :create, :destroy]
+  root "users#new"
 end
+  

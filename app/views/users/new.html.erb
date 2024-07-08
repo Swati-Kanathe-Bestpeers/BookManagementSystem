@@ -1,0 +1,11 @@
+<div class="container">
+  <h2> Sign Up.....</h2>
+  <%= form_with model: @user do |form| %>
+    <p><strong><%= form.label :username, " Name" %></strong></p>
+    <p><strong><%= form.text_field :username %></strong></p>
+    <p><strong><%= form.label :password , "Password" %></strong></p>
+    <p><strong><%= form.password_field :password %></strong></p>
+    <%= link_to "Login", new_session_path %>
+    <%= form.submit "Create" %>
+  <% end%> 
+</div>
