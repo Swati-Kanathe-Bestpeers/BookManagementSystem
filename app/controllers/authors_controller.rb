@@ -16,8 +16,8 @@ class AuthorsController < ApplicationController
   end
 
   def create 
-    @author = Author.new
-    if @author.after_save
+    @author = Author.new(author_param)
+    if @author.save
       redirect_to authors_path
     else
       render 'new'
@@ -35,6 +35,6 @@ class AuthorsController < ApplicationController
   end
   private
   def author_param
-    params.require(:author).permit(:first_name, :last_name)
+    params.require(:author).permit(:first_name, :last_name, :title)
   end
 end

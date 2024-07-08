@@ -1,1 +1,26 @@
-<h1>Edit New data here</h1>
+<div class="container">
+  <h3>Add New </h3>
+  <div class="container">
+    <%= form_with model: (@review) do |form| %>
+      <p><strong><%= form.label :title , "Title" %></strong></p>
+      <p><strong><%= form.text_field :title %></strong></p>
+
+      <p><strong><%=form.label :body, "Body" %></strong></p>
+      <p><strong><%=form.text_field :body %></strong></p>
+
+      <p><strong><%=form.label :rating, "Rating" %></strong></p>
+      <p><strong><%=form.number_field :rating %></strong></p>
+
+      <p><strong><%=form.label :state, "State" %></strong></p>
+      <p><strong><%=form.number_field :state %></strong></p>
+
+      <p><strong><%=form.label :customer_id, "Customer Id" %></strong></p>
+      <p><strong><%=form.number_field :customer_id %></strong></p>
+
+      <p><strong><%=form.label :book_id, "Book Id" %></strong></p>
+      <p><strong><%=form.number_field :book_id %></strong></p>
+
+      <%= form.submit "Create" %>
+    <% end%>
+  </div>
+</div>

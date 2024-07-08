@@ -1,1 +1,29 @@
-<h1>Edit New data here</h1>
+<div class="container">
+  <h3>Add New </h3>
+  <div class="container">
+    <%= form_with model: (@order) do |form| %>
+      <p><strong><%= form.label :date_submitted , "Date Submitted" %></strong></p>
+      <p><strong><%= form.text_field :date_submitted %></strong></p>
+
+      <p><strong><%=form.label :status, "Status" %></strong></p>
+      <p><strong><%=form.number_field :status %></strong></p>
+
+      <p><strong><%=form.label :subtotal, "Subtotal" %></strong></p>
+      <p><strong><%=form.number_field :subtotal %></strong></p>
+
+      <p><strong><%=form.label :shipping, "Shipping" %></strong></p>
+      <p><strong><%=form.number_field :shipping %></strong></p>
+
+      <p><strong><%=form.label :tax, "Tax" %></strong></p>
+      <p><strong><%=form.number_field :tax %></strong></p>
+
+      <p><strong><%=form.label :total, "Total" %></strong></p>
+      <p><strong><%=form.number_field :total %></strong></p>
+
+      <p><strong><%=form.label :customer_id, "Customer Id" %></strong></p>
+      <p><strong><%=form.number_field :customer_id %></strong></p>
+
+      <%= form.submit "Create" %>
+    <% end%>
+  </div>
+</div>
