@@ -17,7 +17,7 @@ class BooksController < ApplicationController
   
   def create
     @book = Book.new
-    if @book.after_save
+    if @book.save
       redirect_to books_path
     else
       render 'new'

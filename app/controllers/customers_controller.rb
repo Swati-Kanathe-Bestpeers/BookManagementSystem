@@ -24,7 +24,7 @@ class CustomersController < ApplicationController
   
   def create
     @customer = Customer.new(customer_param)
-    if @customer.after_save 
+    if @customer.save 
       redirect_to customers_path
     else
       render json: {:errors => @customer.errors.full_messages}

@@ -1,12 +1,14 @@
-<h2>Edit Order Details Here.</h2>
-<%= form_for @order do |form| %>
-  <p><strong><%= form.label :status, "Status" %></strong></p>
-  <p><strong><%= form.number_field  :status %></strong></p>
-  <p><strong><%= form.label :tax, "Tax" %></strong></p>
-  <p><strong><%= form.number_field :tax, step: 0.5 %></strong></p>
-  <p><strong><%= form.label :total , "Total" %></strong></p>
-  <p><strong><%= form.number_field :total , step: 0.5 %></strong></p>
-  <%=form.submit%>
-<% end %>
-<br>
-<%= button_to " Delete Order",@order, method: "delete" %>
+<div class="container">
+  <h2>Edit Order Details Here.</h2>
+  <%= form_for @order do |form| %>
+    <p><strong><%= form.label :status, "Status" %></strong></p>
+    <p><strong><%= form.number_field  :status %></strong></p>
+    <p><strong><%= form.label :tax, "Tax" %></strong></p>
+    <p><strong><%= form.number_field :tax, step: 0.5 %></strong></p>
+    <p><strong><%= form.label :total , "Total" %></strong></p>
+    <p><strong><%= form.number_field :total , step: 0.5 %></strong></p>
+    <%=form.submit%>
+  <% end %>
+  <br>
+  <%= button_to " Delete Order",@order, method: "delete" %>
+</div>
